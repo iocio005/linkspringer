@@ -1,4 +1,5 @@
 import requests
+import time
 import lxml.html
 from urlparse import urljoin
 from pyPdf import PdfFileWriter, PdfFileReader
@@ -30,6 +31,7 @@ class Download_Book():
 					pdfOne = PdfFileReader(f).getPage(a)
 					output.addPage(pdfOne)
 
+		print file
 		outputStream = file(r""+book_title+".pdf", "wb")
 		output.write(outputStream)
 		outputStream.close()
@@ -62,7 +64,16 @@ print '''
 *                                   *
 *************************************
 '''
-url = raw_input('Book URL: ')
-resource.setrlimit(resource.RLIMIT_NOFILE, (500,-1))
-Download_Book().download(url)
+#url = raw_input('Book URL: ')
+"""
+urlfile = open('../libros/urls.txt', 'r')
+for line in urlfile.readlines():
+	urlfile = line
+	Download_Book().download(line)
+	print "esperando 5 segundos para el siguiente libro..."
+	time.sleep(10)
+	#print "iteracion 1"
+	"""
+#resource.setrlimit(resource.RLIMIT_NOFILE, (500,-1))
+Download_Book().download('http://link.springer.com/book/10.1007/978-3-642-22288-7')
 
