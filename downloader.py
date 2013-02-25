@@ -64,16 +64,38 @@ print '''
 *                                   *
 *************************************
 '''
-#url = raw_input('Book URL: ')
-"""
-urlfile = open('../libros/urls.txt', 'r')
-for line in urlfile.readlines():
-	urlfile = line
-	Download_Book().download(line)
-	print "esperando 5 segundos para el siguiente libro..."
-	time.sleep(10)
-	#print "iteracion 1"
-	"""
-#resource.setrlimit(resource.RLIMIT_NOFILE, (500,-1))
-Download_Book().download('http://link.springer.com/book/10.1007/978-3-642-22288-7')
 
+"""
+
+"""
+#resource.setrlimit(resource.RLIMIT_NOFILE, (500,-1))
+
+def Tres():
+	Download_Book().download('http://link.springer.com/book/10.1007/978-3-642-22288-7')
+
+ 
+def Uno():
+    url = raw_input('Book URL: ')
+    Download_Book().download(url)
+ 
+def Dos():
+	local_url = raw_input('URLs file path: ')
+	urlfile = open('local_url', 'r')
+	for line in urlfile.readlines():
+		urlfile = line
+		Download_Book().download(line)
+		print "esperando 10 segundos para el siguiente libro..."
+		time.sleep(10)
+	
+ 
+
+
+Switch = { 1 : Uno, 2 : Dos, 3 : Tres,}
+print "Selecciona modo de actuacion"
+print "1 - Descarga un libro"
+print "2 - Descarga desde un fichero de urls"
+print "3 - Modo pruebas"
+
+num = raw_input("Introduce un numero \n")
+
+Switch[int(num)]()
