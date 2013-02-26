@@ -3,7 +3,7 @@ import time
 import lxml.html
 from urlparse import urljoin
 from pyPdf import PdfFileWriter, PdfFileReader
-import os
+import os, sys
 import resource
 import urllib2
 
@@ -59,35 +59,6 @@ class Download_Book():
             print url
         Download_Book().concatenate_pdf(book_title)
 
-
-print '''
-************************************
-*                                   *
-* Books Downloader link springer    *
-*                                   *
-*************************************
-'''
-
-"""
-
-"""
-
-try:
-    response = urllib2.urlopen('http://www.google.es')
-    html = response.getcode()
-    if html == 200:
-        print "true"
-        
-except urllib2.HTTPError, e:
-    print "Error de protocolo"
-    print e.code
-except urllib2.URLError, e:
-    print "URL incorrecta"
-    print e.args
-except ValueError, e:
-    print "Valor incorrecto"
-
-#resource.setrlimit(resource.RLIMIT_NOFILE, (500,-1))
 def Tres():
     urlfile = open('/home/iocio/python/LinkSpringer/URLs/urls.txt', 'r')
 
@@ -151,6 +122,43 @@ def Dos():
             print "Valor incorrecto"
 
 Switch = { 1 : Uno, 2 : Dos, 3 : Tres,}
+
+
+
+
+
+print '''
+************************************
+*                                   *
+* Books Downloader link springer    *
+*                                   *
+*************************************
+'''
+print "Platform: "+str(sys.platform)
+
+"""
+Esto es solo para pruebas
+"""
+
+try:
+    response = urllib2.urlopen('http://www.google.es')
+    html = response.getcode()
+    if html == 200:
+        print "true"
+        
+except urllib2.HTTPError, e:
+    print "Error de protocolo"
+    print e.code
+except urllib2.URLError, e:
+    print "URL incorrecta"
+    print e.args
+except ValueError, e:
+    print "Valor incorrecto"
+"""
+
+"""
+#resource.setrlimit(resource.RLIMIT_NOFILE, (500,-1))
+
 print "Selecciona modo de actuacion"
 print "1 - Descarga un libro"
 print "2 - Descarga desde un fichero de urls"
