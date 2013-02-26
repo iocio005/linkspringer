@@ -49,6 +49,8 @@ class Download_Book():
         book_title= html.cssselect('h1#title')[0].text_content() 
         chapter=01
         for i in html.cssselect('li.toc-item'):
+            if len(book_title) > 55:
+                book_title = book_title[0: 55]
             url=urljoin(parent_url,i.cssselect('div.actions')[0].cssselect('span.action')[0].cssselect('a')[0].get('href'))
             pdf=requests.get(url).content
             f = open(book_title+str(chapter)+'.pdf', 'wb+')
@@ -87,7 +89,26 @@ except ValueError, e:
 
 #resource.setrlimit(resource.RLIMIT_NOFILE, (500,-1))
 def Tres():
-    Download_Book.download('http://link.springer.com/book/10.1007/978-3-642-22288-7')
+    urlfile = open('/home/iocio/python/LinkSpringer/URLs/urls.txt', 'r')
+
+    for line in urlfile.readlines():
+        try:
+            response = urllib2.urlopen(line)
+            html = response.getcode()
+            print html
+            if html == 200:
+                print 'true'
+                Download_Book().download(line)
+                print "esperando 10 segundos para el siguiente libro..."
+                time.sleep(10)
+        except urllib2.HTTPError, e:
+            print "Error de protocolo"
+            print e.code
+        except urllib2.URLError, e:
+            print "URL incorrecta"
+            print e.args
+        except ValueError, e:
+            print "Valor incorrecto"
 
 def Uno():
     url = raw_input('Book URL: ')
