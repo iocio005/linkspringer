@@ -1,11 +1,13 @@
 import requests
 import time
+from time import gmtime, strftime
 import lxml.html
 from urlparse import urljoin
 from pyPdf import PdfFileWriter, PdfFileReader
 import os, sys
 import resource
 import urllib2
+import traceback
 
 class Download_Book():
 
@@ -179,5 +181,15 @@ print "2 - Descarga desde un fichero de urls"
 print "3 - Modo pruebas"
 
 num = raw_input("Introduce un numero \n")
+try:
+    Switch[int(num)]()
+except:
+    log_file = open('./log.txt', 'a')
+    exc_type, exc_value, exc_traceback = sys.exc_info()
+    lines = traceback.format_exception(exc_type, exc_value, exc_traceback)
+    #log.file.write(time.localtime().tm_year+'-'+time.localtime().tm_mont+'-'+time.localtime().tm_)
+    log_file.write(strftime("\n%a, %d %b %Y %H:%M:%S\n\n", gmtime()))
+    log_file.write(''.join('!! ' + line for line in lines))  # Log it or whatever here
+    log_file.write('======================================\n======================================\n')
 
-Switch[int(num)]()
+    log_file.close()

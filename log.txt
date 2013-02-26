@@ -1,0 +1,72 @@
+
+Tue, 26 Feb 2013 20:22:23
+!! Traceback (most recent call last):
+!!   File "downloader.py", line 185, in <module>
+    Switch[int(num)]()
+!!   File "downloader.py", line 74, in Tres
+    Download_Book().download(line)
+!!   File "downloader.py", line 62, in download
+    Download_Book().concatenate_pdf(book_title)
+!!   File "downloader.py", line 27, in concatenate_pdf
+    num_pages=PdfFileReader(f).getNumPages()
+!!   File "/usr/local/lib/python2.7/dist-packages/pyPdf/pdf.py", line 374, in __init__
+    self.read(stream)
+!!   File "/usr/local/lib/python2.7/dist-packages/pyPdf/pdf.py", line 707, in read
+    raise utils.PdfReadError, "EOF marker not found"
+!! PdfReadError: EOF marker not found
+======================================
+======================================
+
+Tue, 26 Feb 2013 20:22:36
+!! Traceback (most recent call last):
+!!   File "downloader.py", line 185, in <module>
+    Switch[int(num)]()
+!!   File "downloader.py", line 74, in Tres
+    Download_Book().download(line)
+!!   File "downloader.py", line 62, in download
+    Download_Book().concatenate_pdf(book_title)
+!!   File "downloader.py", line 27, in concatenate_pdf
+    num_pages=PdfFileReader(f).getNumPages()
+!!   File "/usr/local/lib/python2.7/dist-packages/pyPdf/pdf.py", line 374, in __init__
+    self.read(stream)
+!!   File "/usr/local/lib/python2.7/dist-packages/pyPdf/pdf.py", line 707, in read
+    raise utils.PdfReadError, "EOF marker not found"
+!! PdfReadError: EOF marker not found
+======================================
+======================================
+
+Tue, 26 Feb 2013 20:22:42
+!! Traceback (most recent call last):
+!!   File "downloader.py", line 185, in <module>
+    Switch[int(num)]()
+!!   File "downloader.py", line 74, in Tres
+    Download_Book().download(line)
+!!   File "downloader.py", line 62, in download
+    Download_Book().concatenate_pdf(book_title)
+!!   File "downloader.py", line 27, in concatenate_pdf
+    num_pages=PdfFileReader(f).getNumPages()
+!!   File "/usr/local/lib/python2.7/dist-packages/pyPdf/pdf.py", line 374, in __init__
+    self.read(stream)
+!!   File "/usr/local/lib/python2.7/dist-packages/pyPdf/pdf.py", line 707, in read
+    raise utils.PdfReadError, "EOF marker not found"
+!! PdfReadError: EOF marker not found
+======================================
+======================================
+
+Tue, 26 Feb 2013 20:22:46
+!! Traceback (most recent call last):
+!!   File "downloader.py", line 185, in <module>
+    Switch[int(num)]()
+!!   File "downloader.py", line 74, in Tres
+    Download_Book().download(line)
+!!   File "downloader.py", line 62, in download
+    Download_Book().concatenate_pdf(book_title)
+!!   File "downloader.py", line 27, in concatenate_pdf
+    num_pages=PdfFileReader(f).getNumPages()
+!!   File "/usr/local/lib/python2.7/dist-packages/pyPdf/pdf.py", line 374, in __init__
+    self.read(stream)
+!!   File "/usr/local/lib/python2.7/dist-packages/pyPdf/pdf.py", line 707, in read
+    raise utils.PdfReadError, "EOF marker not found"
+!! PdfReadError: EOF marker not found
+======================================
+======================================
