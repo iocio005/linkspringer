@@ -70,8 +70,15 @@ def Tres():
             if html == 200:
                 print 'true'
                 Download_Book().download(line)
-                print "esperando 10 segundos para el siguiente libro..."
-                time.sleep(10)
+                if "linux" in systemOS:
+                    print "esperando 10 segundos para el siguiente libro..."
+                    time.sleep(10)
+                elif "mac" in systemOS:
+                    print "esperando 10 segundos para el siguiente libro..."
+                    resource.setrlimit(resource.RLIMIT_NOFILE, (500,-1))
+                elif "win" in systemOS:
+                    print "esperando 10 segundos para el siguiente libro..."
+                    time.sleep(10)
         except urllib2.HTTPError, e:
             print "Error de protocolo"
             print e.code
@@ -110,8 +117,15 @@ def Dos():
             if html == 200:
                 print 'true'
                 Download_Book().download(line)
-                print "esperando 10 segundos para el siguiente libro..."
-                time.sleep(10)
+                if "linux" in systemOS:
+                    print "esperando 10 segundos para el siguiente libro..."
+                    time.sleep(10)
+                elif "mac" in systemOS:
+                    print "esperando 10 segundos para el siguiente libro..."
+                    resource.setrlimit(resource.RLIMIT_NOFILE, (500,-1))
+                elif "win" in systemOS:
+                    print "esperando 10 segundos para el siguiente libro..."
+                    time.sleep(10)
         except urllib2.HTTPError, e:
             print "Error de protocolo"
             print e.code
@@ -134,8 +148,8 @@ print '''
 *                                   *
 *************************************
 '''
-print "Platform: "+str(sys.platform)
-
+systemOS = sys.platform
+print "Platform: "+systemOS
 """
 Esto es solo para pruebas
 """
