@@ -1,3 +1,5 @@
+#!usr/bin/env python
+
 import requests
 import time
 from time import gmtime, strftime
@@ -54,12 +56,18 @@ class Download_Book():
             if len(book_title) > 55:
                 book_title = book_title[0: 55]
             url=urljoin(parent_url,i.cssselect('div.actions')[0].cssselect('span.action')[0].cssselect('a')[0].get('href'))
-            pdf=requests.get(url).content
-            f = open(book_title+str(chapter)+'.pdf', 'wb+')
-            f.write(pdf)
-            chapter+=1
-            print url
-        Download_Book().concatenate_pdf(book_title)
+            if 'pdf' in url:
+                libroValido = True
+                pdf=requests.get(url).content
+                f = open(book_title+str(chapter)+'.pdf', 'wb+')
+                f.write(pdf)
+                chapter+=1
+                print url
+            else:
+                libroValido = False
+                print "Libro no valido"
+        if libroValido:
+            Download_Book().concatenate_pdf(book_title)
 
 def Tres():
     urlfile = open('/home/iocio/python/LinkSpringer/URLs/urls.txt', 'r')

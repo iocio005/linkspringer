@@ -70,3 +70,422 @@ Tue, 26 Feb 2013 20:22:46
 !! PdfReadError: EOF marker not found
 ======================================
 ======================================
+
+Wed, 27 Feb 2013 10:52:43
+
+!! Traceback (most recent call last):
+!!   File "downloader.py", line 187, in <module>
+    Switch[int(num)]()
+!!   File "downloader.py", line 76, in Tres
+    Download_Book().download(line)
+!!   File "downloader.py", line 64, in download
+    Download_Book().concatenate_pdf(book_title)
+!!   File "downloader.py", line 29, in concatenate_pdf
+    num_pages=PdfFileReader(f).getNumPages()
+!!   File "/usr/local/lib/python2.7/dist-packages/pyPdf/pdf.py", line 374, in __init__
+    self.read(stream)
+!!   File "/usr/local/lib/python2.7/dist-packages/pyPdf/pdf.py", line 707, in read
+    raise utils.PdfReadError, "EOF marker not found"
+!! PdfReadError: EOF marker not found
+======================================
+======================================
+
+Wed, 27 Feb 2013 11:11:08
+
+!! Traceback (most recent call last):
+!!   File "downloader.py", line 187, in <module>
+    Switch[int(num)]()
+!!   File "downloader.py", line 79, in Tres
+    time.sleep(10)
+!! KeyboardInterrupt
+======================================
+======================================
+
+Wed, 27 Feb 2013 11:13:20
+
+!! Traceback (most recent call last):
+!!   File "downloader.py", line 187, in <module>
+    Switch[int(num)]()
+!!   File "downloader.py", line 79, in Tres
+    time.sleep(10)
+!! KeyboardInterrupt
+======================================
+======================================
+
+Wed, 27 Feb 2013 11:15:09
+
+!! Traceback (most recent call last):
+!!   File "downloader.py", line 190, in <module>
+    Switch[int(num)]()
+!!   File "downloader.py", line 79, in Tres
+    Download_Book().download(line)
+!!   File "downloader.py", line 58, in download
+    if 'pdf' in url:
+!! UnboundLocalError: local variable 'url' referenced before assignment
+======================================
+======================================
+
+Wed, 27 Feb 2013 11:15:52
+
+!! Traceback (most recent call last):
+!!   File "downloader.py", line 190, in <module>
+    Switch[int(num)]()
+!!   File "downloader.py", line 82, in Tres
+    time.sleep(10)
+!! KeyboardInterrupt
+======================================
+======================================
+
+Wed, 27 Feb 2013 11:19:49
+
+!! Traceback (most recent call last):
+!!   File "downloader.py", line 190, in <module>
+    Switch[int(num)]()
+!!   File "downloader.py", line 79, in Tres
+    Download_Book().download(line)
+!!   File "downloader.py", line 60, in download
+    pdf=requests.get(url).content
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/api.py", line 55, in get
+    return request('get', url, **kwargs)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/api.py", line 44, in request
+    return session.request(method=method, url=url, **kwargs)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 289, in request
+    history = [r for r in gen] if allow_redirects else []
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 133, in resolve_redirects
+    proxies=proxies
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 279, in request
+    resp = self.send(prep, stream=stream, timeout=timeout, verify=verify, cert=cert, proxies=proxies)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 374, in send
+    r = adapter.send(request, **kwargs)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 174, in send
+    timeout=timeout
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/packages/urllib3/connectionpool.py", line 422, in urlopen
+    body=body, headers=headers)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/packages/urllib3/connectionpool.py", line 274, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+!!   File "/usr/lib/python2.7/httplib.py", line 958, in request
+    self._send_request(method, url, body, headers)
+!!   File "/usr/lib/python2.7/httplib.py", line 992, in _send_request
+    self.endheaders(body)
+!!   File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
+    self._send_output(message_body)
+!!   File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
+    self.send(msg)
+!!   File "/usr/lib/python2.7/httplib.py", line 776, in send
+    self.connect()
+!!   File "/usr/lib/python2.7/httplib.py", line 757, in connect
+    self.timeout, self.source_address)
+!!   File "/usr/lib/python2.7/socket.py", line 562, in create_connection
+    sock.connect(sa)
+!!   File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+!! KeyboardInterrupt
+======================================
+======================================
+
+Wed, 27 Feb 2013 11:21:32
+
+!! Traceback (most recent call last):
+!!   File "downloader.py", line 190, in <module>
+    Switch[int(num)]()
+!!   File "downloader.py", line 82, in Tres
+    time.sleep(10)
+!! KeyboardInterrupt
+======================================
+======================================
+
+Wed, 27 Feb 2013 11:23:10
+
+!! Traceback (most recent call last):
+!!   File "downloader.py", line 190, in <module>
+    Switch[int(num)]()
+!!   File "downloader.py", line 79, in Tres
+    Download_Book().download(line)
+!!   File "downloader.py", line 60, in download
+    pdf=requests.get(url).content
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/api.py", line 55, in get
+    return request('get', url, **kwargs)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/api.py", line 44, in request
+    return session.request(method=method, url=url, **kwargs)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 279, in request
+    resp = self.send(prep, stream=stream, timeout=timeout, verify=verify, cert=cert, proxies=proxies)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 374, in send
+    r = adapter.send(request, **kwargs)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 174, in send
+    timeout=timeout
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/packages/urllib3/connectionpool.py", line 422, in urlopen
+    body=body, headers=headers)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/packages/urllib3/connectionpool.py", line 274, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+!!   File "/usr/lib/python2.7/httplib.py", line 958, in request
+    self._send_request(method, url, body, headers)
+!!   File "/usr/lib/python2.7/httplib.py", line 992, in _send_request
+    self.endheaders(body)
+!!   File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
+    self._send_output(message_body)
+!!   File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
+    self.send(msg)
+!!   File "/usr/lib/python2.7/httplib.py", line 776, in send
+    self.connect()
+!!   File "/usr/lib/python2.7/httplib.py", line 757, in connect
+    self.timeout, self.source_address)
+!!   File "/usr/lib/python2.7/socket.py", line 562, in create_connection
+    sock.connect(sa)
+!!   File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+!! KeyboardInterrupt
+======================================
+======================================
+
+Wed, 27 Feb 2013 11:24:36
+
+!! Traceback (most recent call last):
+!!   File "downloader.py", line 190, in <module>
+    Switch[int(num)]()
+!!   File "downloader.py", line 79, in Tres
+    Download_Book().download(line)
+!!   File "downloader.py", line 51, in download
+    source = requests.get(link).content
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/api.py", line 55, in get
+    return request('get', url, **kwargs)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/api.py", line 44, in request
+    return session.request(method=method, url=url, **kwargs)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 279, in request
+    resp = self.send(prep, stream=stream, timeout=timeout, verify=verify, cert=cert, proxies=proxies)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 374, in send
+    r = adapter.send(request, **kwargs)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 174, in send
+    timeout=timeout
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/packages/urllib3/connectionpool.py", line 422, in urlopen
+    body=body, headers=headers)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/packages/urllib3/connectionpool.py", line 282, in _make_request
+    httplib_response = conn.getresponse(buffering=True)
+!!   File "/usr/lib/python2.7/httplib.py", line 1030, in getresponse
+    response.begin()
+!!   File "/usr/lib/python2.7/httplib.py", line 407, in begin
+    version, status, reason = self._read_status()
+!!   File "/usr/lib/python2.7/httplib.py", line 365, in _read_status
+    line = self.fp.readline()
+!!   File "/usr/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+!! KeyboardInterrupt
+======================================
+======================================
+
+Wed, 27 Feb 2013 11:27:46
+
+!! Traceback (most recent call last):
+!!   File "downloader.py", line 190, in <module>
+    Switch[int(num)]()
+!!   File "downloader.py", line 79, in Tres
+    Download_Book().download(line)
+!!   File "downloader.py", line 60, in download
+    pdf=requests.get(url).content
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/api.py", line 55, in get
+    return request('get', url, **kwargs)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/api.py", line 44, in request
+    return session.request(method=method, url=url, **kwargs)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 279, in request
+    resp = self.send(prep, stream=stream, timeout=timeout, verify=verify, cert=cert, proxies=proxies)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 374, in send
+    r = adapter.send(request, **kwargs)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 174, in send
+    timeout=timeout
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/packages/urllib3/connectionpool.py", line 422, in urlopen
+    body=body, headers=headers)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/packages/urllib3/connectionpool.py", line 282, in _make_request
+    httplib_response = conn.getresponse(buffering=True)
+!!   File "/usr/lib/python2.7/httplib.py", line 1030, in getresponse
+    response.begin()
+!!   File "/usr/lib/python2.7/httplib.py", line 407, in begin
+    version, status, reason = self._read_status()
+!!   File "/usr/lib/python2.7/httplib.py", line 365, in _read_status
+    line = self.fp.readline()
+!!   File "/usr/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+!! KeyboardInterrupt
+======================================
+======================================
+
+Wed, 27 Feb 2013 11:30:39
+
+!! Traceback (most recent call last):
+!!   File "downloader.py", line 190, in <module>
+    Switch[int(num)]()
+!!   File "downloader.py", line 79, in Tres
+    Download_Book().download(line)
+!!   File "downloader.py", line 67, in download
+    Download_Book().concatenate_pdf(book_title)
+!!   File "downloader.py", line 17, in concatenate_pdf
+    fileList = os.listdir(os.getcwd("./pdf"))
+!! TypeError: getcwd() takes no arguments (1 given)
+======================================
+======================================
+
+Wed, 27 Feb 2013 11:43:44
+
+!! Traceback (most recent call last):
+!!   File "downloader.py", line 190, in <module>
+    Switch[int(num)]()
+!!   File "downloader.py", line 79, in Tres
+    Download_Book().download(line)
+!!   File "downloader.py", line 60, in download
+    pdf=requests.get(url).content
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/api.py", line 55, in get
+    return request('get', url, **kwargs)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/api.py", line 44, in request
+    return session.request(method=method, url=url, **kwargs)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 279, in request
+    resp = self.send(prep, stream=stream, timeout=timeout, verify=verify, cert=cert, proxies=proxies)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 374, in send
+    r = adapter.send(request, **kwargs)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 174, in send
+    timeout=timeout
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/packages/urllib3/connectionpool.py", line 422, in urlopen
+    body=body, headers=headers)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/packages/urllib3/connectionpool.py", line 274, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+!!   File "/usr/lib/python2.7/httplib.py", line 958, in request
+    self._send_request(method, url, body, headers)
+!!   File "/usr/lib/python2.7/httplib.py", line 992, in _send_request
+    self.endheaders(body)
+!!   File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
+    self._send_output(message_body)
+!!   File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
+    self.send(msg)
+!!   File "/usr/lib/python2.7/httplib.py", line 776, in send
+    self.connect()
+!!   File "/usr/lib/python2.7/httplib.py", line 757, in connect
+    self.timeout, self.source_address)
+!!   File "/usr/lib/python2.7/socket.py", line 562, in create_connection
+    sock.connect(sa)
+!!   File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+!! KeyboardInterrupt
+======================================
+======================================
+
+Wed, 27 Feb 2013 12:07:32
+
+!! Traceback (most recent call last):
+!!   File "downloader.py", line 190, in <module>
+    Switch[int(num)]()
+!!   File "downloader.py", line 79, in Tres
+    Download_Book().download(line)
+!!   File "downloader.py", line 67, in download
+    Download_Book().concatenate_pdf(book_title)
+!!   File "downloader.py", line 17, in concatenate_pdf
+    fileList = os.listdir(os.getcwd(os.open("./pdf/", O_WRONLY)))
+!! NameError: global name 'O_WRONLY' is not defined
+======================================
+======================================
+
+Wed, 27 Feb 2013 12:09:32
+
+!! Traceback (most recent call last):
+!!   File "downloader.py", line 190, in <module>
+    Switch[int(num)]()
+!!   File "downloader.py", line 79, in Tres
+    Download_Book().download(line)
+!!   File "downloader.py", line 67, in download
+    Download_Book().concatenate_pdf(book_title)
+!!   File "downloader.py", line 17, in concatenate_pdf
+    fileList = os.listdir(os.getcwd(os.open("./pdf/", os.O_WRONLY)))
+!! OSError: [Errno 21] Is a directory: './pdf/'
+======================================
+======================================
+
+Wed, 27 Feb 2013 12:30:12
+
+!! Traceback (most recent call last):
+!!   File "downloader.py", line 190, in <module>
+    num = raw_input("Introduce un numero \n")
+!!   File "downloader.py", line 79, in Tres
+    if html == 200:
+!!   File "downloader.py", line 60, in download
+    libroValido = false
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/api.py", line 55, in get
+    return request('get', url, **kwargs)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/api.py", line 44, in request
+    return session.request(method=method, url=url, **kwargs)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 289, in request
+    history = [r for r in gen] if allow_redirects else []
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 133, in resolve_redirects
+    proxies=proxies
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 279, in request
+    resp = self.send(prep, stream=stream, timeout=timeout, verify=verify, cert=cert, proxies=proxies)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 374, in send
+    r = adapter.send(request, **kwargs)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 174, in send
+    timeout=timeout
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/packages/urllib3/connectionpool.py", line 422, in urlopen
+    body=body, headers=headers)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/packages/urllib3/connectionpool.py", line 282, in _make_request
+    httplib_response = conn.getresponse(buffering=True)
+!!   File "/usr/lib/python2.7/httplib.py", line 1030, in getresponse
+    response.begin()
+!!   File "/usr/lib/python2.7/httplib.py", line 407, in begin
+    version, status, reason = self._read_status()
+!!   File "/usr/lib/python2.7/httplib.py", line 365, in _read_status
+    line = self.fp.readline()
+!!   File "/usr/lib/python2.7/socket.py", line 447, in readline
+    data = self._sock.recv(self._rbufsize)
+!! KeyboardInterrupt
+======================================
+======================================
+
+Wed, 27 Feb 2013 12:30:24
+
+!! Traceback (most recent call last):
+!!   File "downloader.py", line 192, in <module>
+    Switch[int(num)]()
+!!   File "downloader.py", line 81, in Tres
+    Download_Book().download(line)
+!!   File "downloader.py", line 60, in download
+    libroValido = false
+!! NameError: global name 'false' is not defined
+======================================
+======================================
+
+Wed, 27 Feb 2013 12:35:24
+
+!! Traceback (most recent call last):
+!!   File "downloader.py", line 193, in <module>
+    Switch[int(num)]()
+!!   File "downloader.py", line 82, in Tres
+    Download_Book().download(line)
+!!   File "downloader.py", line 61, in download
+    pdf=requests.get(url).content
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/api.py", line 55, in get
+    return request('get', url, **kwargs)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/api.py", line 44, in request
+    return session.request(method=method, url=url, **kwargs)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 279, in request
+    resp = self.send(prep, stream=stream, timeout=timeout, verify=verify, cert=cert, proxies=proxies)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/sessions.py", line 374, in send
+    r = adapter.send(request, **kwargs)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/adapters.py", line 174, in send
+    timeout=timeout
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/packages/urllib3/connectionpool.py", line 422, in urlopen
+    body=body, headers=headers)
+!!   File "/usr/local/lib/python2.7/dist-packages/requests/packages/urllib3/connectionpool.py", line 274, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+!!   File "/usr/lib/python2.7/httplib.py", line 958, in request
+    self._send_request(method, url, body, headers)
+!!   File "/usr/lib/python2.7/httplib.py", line 992, in _send_request
+    self.endheaders(body)
+!!   File "/usr/lib/python2.7/httplib.py", line 954, in endheaders
+    self._send_output(message_body)
+!!   File "/usr/lib/python2.7/httplib.py", line 814, in _send_output
+    self.send(msg)
+!!   File "/usr/lib/python2.7/httplib.py", line 776, in send
+    self.connect()
+!!   File "/usr/lib/python2.7/httplib.py", line 757, in connect
+    self.timeout, self.source_address)
+!!   File "/usr/lib/python2.7/socket.py", line 562, in create_connection
+    sock.connect(sa)
+!!   File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+!! KeyboardInterrupt
+======================================
+======================================
